@@ -1,0 +1,40 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400;700&display=swap');
+@import url('http://fonts.cdnfonts.com/css/neutral-face');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap');
+
+:root {
+  --bgPrimary: #5967B5;
+  --bgSecondary: #4A4183;
+  --bgSidebar: #3C3C3C;
+  --textPrimary: #fff;
+  --textSecondary: #4CC9F0;
+  --phoneUpperBoundary: 600px;
+  --tabletUpperBoundary: 1200px;
+  --monospaceFont: 'Roboto Mono', monospace;
+  --success: #0496FF;
+  --warning: #FFBC42;
+  --alert: #D81159;
+  font-family: 'Montserrat', sans-serif;
+  color: var(--textPrimary);
+  font-size: 24px;
+}
+
+ul {
+  line-height: 1.8em;
+}
+
+ul {
+  margin: 1em;
+  padding: 0;
+}
+
+@media screen and (max-width: 1200px) {
+  :root {
+    font-size: 20px;
+  }
+}
+@media screen and (max-width: 600px) {
+  :root {
+    font-size: 16px;
+  }
+}
