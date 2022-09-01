@@ -49,11 +49,11 @@ import LinkWrapper from './ui/link-wrapper.vue';
       c темой: <span :class=$style.highlighted>ED2022_Question</span></p>
     <p>Итоговая оценка за курс выставляется из числа набранных баллов за домашние задания и контрольные в соотношении:</p>
     <ul>
-      <li><BadgeWrapper :class=$style.success>5 – 65%</BadgeWrapper></li>
-      <li><BadgeWrapper :class=$style.warning>4 – 50%</BadgeWrapper></li>
-      <li><BadgeWrapper :class=$style.alert>3 – 30%</BadgeWrapper></li>
+      <li>5 – 65%</li>
+      <li>4 – 50%</li>
+      <li>3 – 30%</li>
     </ul>
-    <LineSeparator />
+    <!-- <LineSeparator /> -->
     <h2>Будьте внимательны!</h2>
     <p>Решения с неправильной темой будут утеряны.</p>
     <p>Домашние задания, присланные после дедлайна, не оцениваются.</p>
@@ -64,16 +64,6 @@ import LinkWrapper from './ui/link-wrapper.vue';
   .highlighted {
     font-family: var(--monospaceFont);
     color: var(--textSecondary);
-  }
-  .success {
-    background: var(--success);
-  }
-  .warning {
-    background: var(--warning);
-  }
-  .alert {
-    background: var(--alert);
-
   }
 </style>
 

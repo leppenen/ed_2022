@@ -10,6 +10,10 @@ export default defineConfig({
   build: {
     outDir: './docs',
   },
+  server: {
+    port: 2000,
+    host: true,
+  },
   plugins: [vue(), vueJsx()],
   resolve: {
     alias: {

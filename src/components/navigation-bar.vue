@@ -59,6 +59,8 @@ defineEmits(['burgerClick'])
       margin-left: auto;
       height: 20px;
       transform: scale(1.5);
+
+      display: none;
     }
   }
 </style>

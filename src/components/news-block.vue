@@ -7,7 +7,7 @@ import PageBlock from '@/components/ui/page-block.vue';
     <template v-slot:heading>
       Новости
     </template>
-    Поздравляем с новым учебным годом! 🥳
+    Поздравляем с новым учебным годом!
   </PageBlock>
 </template>
 

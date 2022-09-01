@@ -4,7 +4,6 @@ import PaddedPage from './components/ui/padded-page.vue';
 import MainBlock from './components/main-block.vue';
 import NewsBlock from './components/news-block.vue';
 import RulesBlock from './components/rules-block.vue';
-import SideBar from './components/side-bar.vue';
 import NavigationBar from './components/navigation-bar.vue';
 import TeachersBlock from './components/teachers-block.vue';
 import MaterialsBlock from './components/materials-block.vue';
@@ -28,11 +27,6 @@ function toggleSideBarShown() {
     <TeachersBlock id="teachers"/>
     <MaterialsBlock id="materials"/>
     <TasksBlock id="tasks"/>
-
-    <SideBar
-      @close="toggleSideBarShown"
-      :isShown=isSideBarShown
-    />
 
     <template v-slot:footer>
     </template>
