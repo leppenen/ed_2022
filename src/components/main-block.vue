@@ -14,8 +14,10 @@
 
 <style module>
   .title {
-    font-family: 'Neutral face';
-    font-size: 96px;
+    font-size: 4em;
+    font-weight: bold;
+    text-transform: uppercase;
+    word-break: break-word;
   }
   .body {
     padding-top: 16px;
@@ -23,16 +25,12 @@
 
   @media screen and (max-width: 1200px) {
     .title {
-      font-size: 48px;
+      font-size: 2em;
     }
   }
   @media screen and (max-width: 600px) {
-    .title {
-      font-size: 24px;
-    }
     .body {
-    padding-top: 8px;
-  }
-
+      padding-top: 8px;
+    }
   }
 </style>
