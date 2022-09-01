@@ -1,5 +1,6 @@
 {
-  "name": "-leppenen",
+  "homepage": "https://yakovm1ke.github.io",
+  "name": "leppenen",
   "version": "0.0.0",
   "scripts": {
     "dev": "vite",
