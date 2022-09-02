@@ -10,7 +10,6 @@
     </template>
     <div :class=$style.teachers>
       <TeacherCard
-        avatarSrc='https://picsum.photos/200'
         full-name='Александр Валерьевич Пошакинский'
         exercise-type='Лекции'
         email='poshakinskiy@mail.ioffe.ru'
@@ -18,9 +17,14 @@
           link: 'https://ioffe.ru',
           title: 'ФТИ им. А.Ф. Иоффе',
         }"
-      />
+      >
+        <img
+          :class=$style.avatar
+          src='../assets/images/lector.jpg'
+          alt='Avatar'
+        >
+      </TeacherCard>
       <TeacherCard
-        avatarSrc='https://picsum.photos/300'
         full-name='Никита Витальевич Леппенен'
         exercise-type='Практика'
         email='leppenen.au@gmail.com'
@@ -28,7 +32,13 @@
           link: 'https://ioffe.ru',
           title: 'ФТИ им. А.Ф. Иоффе',
         }"
-      />
+      >
+        <img
+          :class=$style.avatar
+          src='../assets/images/practice.jpg'
+          alt='Avatar'
+        >
+      </TeacherCard>
     </div>
   </PageBlock>
 </template>
@@ -39,4 +49,11 @@
   flex-direction: column;
   gap: 20px
 }
+.avatar {
+  object-fit: cover;
+  width: 140px;
+  height: 140px;
+  border-radius: 10px;
+}
+
 </style>

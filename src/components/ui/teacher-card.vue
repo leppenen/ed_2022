@@ -2,10 +2,6 @@
 import LinkWrapper from "./link-wrapper.vue";
 import BadgeWrapper from "./badge-wrapper.vue";
   defineProps({
-    avatarSrc: {
-      type: String,
-      required: true,
-    },
     fullName: {
       type: String,
       required: true,
@@ -27,11 +23,7 @@ import BadgeWrapper from "./badge-wrapper.vue";
 
 <template>
   <div :class=$style.teacherCard>
-    <img
-      :class=$style.avatar
-      :src=avatarSrc
-      alt='Avatar'
-    >
+    <slot></slot>
     <div :class=$style.teacherInfo>
       <div>
         {{ fullName }}
@@ -61,12 +53,6 @@ import BadgeWrapper from "./badge-wrapper.vue";
     box-sizing: border-box;
     display: flex;
     gap: 20px;
-  }
-  .avatar {
-    object-fit: cover;
-    width: 140px;
-    height: 140px;
-    border-radius: 10px;
   }
   .teacherInfo {
     display: flex;
