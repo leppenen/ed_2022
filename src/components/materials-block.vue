@@ -7,6 +7,7 @@
       <template v-slot:heading>
         Материалы
       </template>
+      Здесь будет таблица
     </PageBlock>
   </template>
 
