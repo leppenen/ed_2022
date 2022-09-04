@@ -7,6 +7,7 @@
       <template v-slot:heading>
         Задания
       </template>
+      Здесь будут задания
     </PageBlock>
   </template>
 
