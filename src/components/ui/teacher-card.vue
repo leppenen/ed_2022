@@ -1,6 +1,7 @@
 <script setup lang='ts'>
 import LinkWrapper from "./link-wrapper.vue";
 import BadgeWrapper from "./badge-wrapper.vue";
+import CopiedText from "./copied-text.vue";
   defineProps({
     fullName: {
       type: String,
@@ -31,12 +32,7 @@ import BadgeWrapper from "./badge-wrapper.vue";
       <BadgeWrapper>
         {{ exerciseType }}
       </BadgeWrapper>
-        <LinkWrapper
-        :href='`mailto:${email}`'
-        target='_blank'
-        >
-        {{email}}
-      </LinkWrapper>
+      <CopiedText :text="email" />
       <LinkWrapper
         :href=graduated.link
         target='_blank'
@@ -57,7 +53,8 @@ import BadgeWrapper from "./badge-wrapper.vue";
   .teacherInfo {
     display: flex;
     flex-direction: column;
-    gap: 4px;
+    align-items: flex-start;
+    gap: 6px;
   }
   @media screen and (max-width: 600px) {
     .teacherCard {

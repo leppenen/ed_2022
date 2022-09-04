@@ -1,8 +1,8 @@
 <script setup lang='ts'>
-  import PageBlock from '@/components/ui/page-block.vue';
-  import BadgeWrapper from './ui/badge-wrapper.vue';
-import LineSeparator from './ui/line-separator.vue';
+import PageBlock from '@/components/ui/page-block.vue';
+import BadgeWrapper from './ui/badge-wrapper.vue';
 import LinkWrapper from './ui/link-wrapper.vue';
+import CopiedText from './ui/copied-text.vue';
 </script>
 
 <template>
@@ -17,14 +17,7 @@ import LinkWrapper from './ui/link-wrapper.vue';
     </ul>
     <h2>Домашние задания</h2>
     <p>
-      Отправлять на почту
-      <LinkWrapper
-        href='mailto:leppenen.au@gmail.com'
-        target='_blank'
-      >
-        leppenen.au@gmail.com
-      </LinkWrapper>
-      до дедлайна
+      Отправлять на почту <CopiedText text='leppenen.au@gmail.com' /> до дедлайна
     </p>
     <ul>
       <li>
@@ -39,14 +32,11 @@ import LinkWrapper from './ui/link-wrapper.vue';
         Пример: <span :class=$style.highlighted>ED2022_HW_1</span>
       </li>
     </ul>
-    <p>Вопросы по домашним заданиям присылайте на почту
-      <LinkWrapper
-        href='mailto:leppenen.au@gmail.com'
-        target='_blank'
-      >
-        leppenen.au@gmail.com
-      </LinkWrapper>
-      c темой: <span :class=$style.highlighted>ED2022_Question</span></p>
+    <p>
+      Вопросы по домашним заданиям присылайте на почту
+      <CopiedText text='leppenen.au@gmail.com' /> c темой:
+      <span :class=$style.highlighted>ED2022_Question</span>
+    </p>
     <p>Итоговая оценка за курс выставляется из числа набранных баллов за домашние задания и контрольные в соотношении:</p>
     <ul>
       <li>5 – 65%</li>

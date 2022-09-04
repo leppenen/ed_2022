@@ -2,16 +2,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto&family=Roboto+Condensed:wght@300;700&display=swap');
 
 :root {
-  /* --bgPrimary: #5967B5; */
-  --bgPrimary: #333;
-  /* --bgSecondary: #4A4183; */
-  --bgSecondary: #000;
+  --bgPrimary: #222;
+  --bgSecondary: #080708;
   --bgSidebar: #3C3C3C;
-  --textPrimary: #fff;
-  --textSecondary: #4CC9F0;
+  --textPrimary: #E6E8E6;
+  --textSecondary: #FDCA40;
   --phoneUpperBoundary: 600px;
   --tabletUpperBoundary: 1200px;
   --monospaceFont: 'Roboto Mono', monospace;
+  --textShadow: 0 0 4px;
   font-family: 'Roboto Condensed', sans-serif;
   color: var(--textPrimary);
   font-size: 20px;

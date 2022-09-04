@@ -17,7 +17,7 @@
 
 <style module>
 .link {
-  text-decoration: none;
+  text-decoration-color: var(--textSecondary);
   color: inherit;
   width: fit-content;
 }
