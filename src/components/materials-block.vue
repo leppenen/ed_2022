@@ -5,7 +5,7 @@ import LinkWrapper from './ui/link-wrapper.vue'
 
   function openFile() {
     window.open(file, 'fullscreen=yes')
-    return false
+    return
   }
 </script>
 
@@ -18,8 +18,7 @@ import LinkWrapper from './ui/link-wrapper.vue'
       <ul>
         <li>
           <LinkWrapper
-            href='#'
-            target='_blank'
+            href=''
             @click='openFile'
           >
             План курса

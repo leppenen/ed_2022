@@ -22,6 +22,6 @@
   width: fit-content;
 }
 .link:hover {
-  text-shadow: 0 0 4px;
+  color: var(--textSecondary);
 }
 </style>

@@ -1,7 +1,6 @@
 <script setup lang='ts'>
 import PageBlock from '@/components/ui/page-block.vue';
 import BadgeWrapper from './ui/badge-wrapper.vue';
-import LinkWrapper from './ui/link-wrapper.vue';
 import CopiedText from './ui/copied-text.vue';
 </script>
 
@@ -21,7 +20,7 @@ import CopiedText from './ui/copied-text.vue';
     </p>
     <ul>
       <li>
-        Формат решения задач: LaTEX <BadgeWrapper>.tex</BadgeWrapper> и <BadgeWrapper>.pdf</BadgeWrapper>
+        Формат решения задач LaTEX. Присылайте <BadgeWrapper>.tex</BadgeWrapper> и <BadgeWrapper>.pdf</BadgeWrapper> файлы.
       </li>
       <li>
         Формат названия файла: <span :class=$style.highlighted>familiya_N.tex/familiya_N.pdf</span> , где <BadgeWrapper>N</BadgeWrapper> - номер задания.

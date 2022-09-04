@@ -18,8 +18,7 @@ function openFile() {
       <ul>
         <li>
           <LinkWrapper
-            href='#'
-            target='_blank'
+            href=''
             @click='openFile'
           >
             Задание №1

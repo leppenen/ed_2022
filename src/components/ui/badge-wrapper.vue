@@ -10,6 +10,7 @@
   width: fit-content;
   box-sizing: border-box;
   background: var(--bgSecondary);
-  border-radius: 2em;
+  border-radius: 0.6em;
+  color: var(--textSecondary);
 }
 </style>

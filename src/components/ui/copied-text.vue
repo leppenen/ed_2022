@@ -55,6 +55,7 @@ function showPopup() {
   }
   .text:hover {
     cursor: pointer;
+    color: var(--textSecondary);
   }
   .popup {
     position: absolute;
