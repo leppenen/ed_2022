@@ -1,13 +1,13 @@
 <script setup lang='ts'>
 import PageBlock from '@/components/ui/page-block.vue';
-import file from '@/assets/files/tasks/e1_2022.pdf'
+import task1 from '@/assets/files/tasks/e1_2022.pdf'
 import LinkWrapper from './ui/link-wrapper.vue';
 import BadgeWrapper from './ui/badge-wrapper.vue';
 
-function openFile() {
-    window.open(file, 'fullscreen=yes')
-    return false
-  }
+function openFile(filePath: string) {
+  window.open(filePath, 'fullscreen=yes')
+  return false
+}
 </script>
 
   <template>
@@ -19,7 +19,7 @@ function openFile() {
         <li>
           <LinkWrapper
             href=''
-            @click='openFile'
+            @click='openFile(task1)'
           >
             Задание №1
           </LinkWrapper>&nbsp;
