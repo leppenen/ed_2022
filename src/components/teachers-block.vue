@@ -1,6 +1,8 @@
 <script setup lang='ts'>
   import PageBlock from '@/components/ui/page-block.vue';
   import TeacherCard from './ui/teacher-card.vue';
+
+  const ioffeLink = 'http://www.ioffe.ru/coherent/index.html/Coherent/Main.html'
 </script>
 
 <template>
@@ -14,7 +16,7 @@
         exercise-type='Лекции'
         email='poshakinskiy@mail.ioffe.ru'
         :graduated="{
-          link: 'https://ioffe.ru',
+          link: ioffeLink,
           title: 'ФТИ им. А.Ф. Иоффе',
         }"
       >
@@ -29,7 +31,7 @@
         exercise-type='Практика'
         email='leppenen.au@gmail.com'
         :graduated="{
-          link: 'https://ioffe.ru',
+          link: ioffeLink,
           title: 'ФТИ им. А.Ф. Иоффе',
         }"
       >
