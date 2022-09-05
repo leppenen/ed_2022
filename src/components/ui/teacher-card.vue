@@ -48,21 +48,19 @@ import CopiedText from "./copied-text.vue";
     width: 100%;
     box-sizing: border-box;
     display: flex;
+    flex-wrap: wrap;
     gap: 20px;
   }
   .teacherInfo {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+    width: 280px;
     gap: 6px;
   }
   @media screen and (max-width: 600px) {
     .teacherCard {
       gap: 10px;
-    }
-    .avatar {
-      width: 60px;
-      height: 90px;
     }
   }
 </style>

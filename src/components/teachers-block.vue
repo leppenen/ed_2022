@@ -53,7 +53,7 @@
   object-fit: cover;
   width: 140px;
   height: 140px;
-  border-radius: 10px;
+  border-radius: 1em;
 }
 
 </style>
