@@ -17,6 +17,7 @@
 }
 
 body {
+  min-width: 400px;
   background: var(--bgSecondary);
 }
 
@@ -31,12 +32,7 @@ ul {
   }
 }
 
-* {
+*, :after, :before {
+  box-sizing: border-box;
   word-break: break-word;
-}
-
-@media screen and (max-width: 400px) {
-  :root {
-    font-size: 14px;
-  }
 }

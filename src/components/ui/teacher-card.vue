@@ -48,7 +48,6 @@ import CopiedText from "./copied-text.vue";
     width: 100%;
     box-sizing: border-box;
     display: flex;
-    flex-wrap: wrap;
     gap: 20px;
   }
   .teacherInfo {
