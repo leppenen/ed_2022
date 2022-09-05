@@ -28,4 +28,8 @@ import TasksBlock from './components/tasks-block.vue';
 </template>
 
 <style module>
+  .table {
+    width: 100%;
+    height: 340px;
+  }
 </style>

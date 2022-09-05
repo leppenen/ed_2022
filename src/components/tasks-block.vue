@@ -1,6 +1,7 @@
 <script setup lang='ts'>
 import PageBlock from '@/components/ui/page-block.vue';
 import task1 from '@/assets/files/tasks/e1_2022.pdf'
+import solve1 from '@/assets/files/tasks/e1a.pdf'
 import LinkWrapper from './ui/link-wrapper.vue';
 import BadgeWrapper from './ui/badge-wrapper.vue';
 
@@ -17,15 +18,16 @@ function openFile(filePath: string) {
       </template>
       <ul>
         <li>
-          <LinkWrapper
-            href=''
-            @click='openFile(task1)'
-          >
-            Задание №1
-          </LinkWrapper>&nbsp;
-          <BadgeWrapper>Дедлайн: 12.09.2022 23:59</BadgeWrapper>
+          <LinkWrapper href='' @click='openFile(task1)'>Задание №1</LinkWrapper>&nbsp;
+          <!-- Поменять в v-show='true' на v-show='false', чтобы скрыть и наоборот -->
+          <BadgeWrapper v-show='true'>Дедлайн: 12.09.2022 23:59</BadgeWrapper>
+          <LinkWrapper v-show='false' href='' @click='openFile(solve1)'>Решение №1</LinkWrapper>&nbsp;
+        </li>
+        <li v-show='false'>
+          <LinkWrapper href='' @click='openFile(task1)'>Задание №2</LinkWrapper>&nbsp;
+          <BadgeWrapper v-show='true'>Дедлайн: </BadgeWrapper>
+          <LinkWrapper v-show='false' href='' @click='openFile(solve1)'>Решение №2</LinkWrapper>&nbsp;
         </li>
       </ul>
-
     </PageBlock>
   </template>
