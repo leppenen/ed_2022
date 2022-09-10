@@ -3,11 +3,6 @@ import PageBlock from '@/components/ui/page-block.vue';
 import coursePlan from '@/assets/files/materials/course_plan.pdf'
 import references from '@/assets/files/materials/references.pdf'
 import LinkWrapper from './ui/link-wrapper.vue'
-
-function openFile(filePath: string) {
-  window.open(filePath, 'fullscreen=yes')
-  return
-}
 </script>
 
   <template>
@@ -19,16 +14,16 @@ function openFile(filePath: string) {
       <ul>
         <li>
           <LinkWrapper
-            href=''
-            @click='openFile(coursePlan)'
+            :href='coursePlan'
+            target='_blank'
           >
             План курса
           </LinkWrapper>
         </li>
         <li>
           <LinkWrapper
-            href=''
-            @click='openFile(references)'
+            :href='references'
+            target='_blank'
           >
             Список литературы
           </LinkWrapper>
