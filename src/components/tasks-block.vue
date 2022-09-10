@@ -5,11 +5,6 @@ import task2 from '@/assets/files/tasks/e2.pdf'
 // import solve1 from '@/assets/files/tasks/e1a.pdf'
 import LinkWrapper from './ui/link-wrapper.vue';
 import BadgeWrapper from './ui/badge-wrapper.vue';
-
-function openFile(filePath: string) {
-  window.open(filePath, 'fullscreen=yes')
-  return false
-}
 </script>
 
   <template>
