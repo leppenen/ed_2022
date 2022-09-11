@@ -5,6 +5,22 @@ import task2 from '@/assets/files/tasks/e2.pdf'
 // import solve1 from '@/assets/files/tasks/e1a.pdf'
 import LinkWrapper from './ui/link-wrapper.vue';
 import BadgeWrapper from './ui/badge-wrapper.vue';
+import {computed} from "vue";
+
+const createDate = (year: number, month: number, day: number, hour?: number, minute?: number) => {
+  // NOTE: month - 1 нужно, потому что месяцы в js с 0
+  return new Date(year, month - 1, day, hour, minute)
+}
+
+const isSolution1Shown = computed(() => (
+  // new Date() - текущая дата
+  // createDate() принимает аргументы: год, месяц, день, час(опционально), минуты(опционально)
+  new Date() > createDate(2022, 9, 13, 0, 5)
+))
+
+const isSolution2Shown = computed(() => (
+  new Date() > createDate(2022, 9, 14, 0, 5)
+))
 </script>
 
   <template>
@@ -16,13 +32,29 @@ import BadgeWrapper from './ui/badge-wrapper.vue';
         <li>
           <LinkWrapper :href='task1' target='_blank'>Задание №1</LinkWrapper>&nbsp;
           <!-- Поменять в v-show='true' на v-show='false', чтобы скрыть и наоборот -->
-          <BadgeWrapper v-show='true'>Дедлайн: 12.09.2022 23:59</BadgeWrapper>
-          <LinkWrapper v-show='false' href='' target='_blank'>Решение №1</LinkWrapper>&nbsp;
+          <BadgeWrapper v-show='!isSolution1Shown'>Дедлайн: 12.09.2022 23:59</BadgeWrapper>&nbsp;
+
+          <!-- ! Не забыть заполнить href -->
+          <LinkWrapper
+            v-show='isSolution1Shown'
+            href=''
+            target='_blank'
+          >
+            Решение №1
+          </LinkWrapper>&nbsp;
         </li>
         <li>
           <LinkWrapper :href='task2' target='_blank'>Задание №2</LinkWrapper>&nbsp;
-          <BadgeWrapper v-show='true'>Дедлайн: 13.09.2022 23:59 </BadgeWrapper>
-          <LinkWrapper v-show='false' href='' target='_blank'>Решение №2</LinkWrapper>&nbsp;
+          <BadgeWrapper v-show='!isSolution2Shown'>Дедлайн: 13.09.2022 23:59 </BadgeWrapper>&nbsp;
+
+          <!-- ! Не забыть заполнить href -->
+          <LinkWrapper
+            v-show='isSolution2Shown'
+            href=''
+            target='_blank'
+          >
+            Решение №2
+          </LinkWrapper>&nbsp;
         </li>
       </ul>
     </PageBlock>
