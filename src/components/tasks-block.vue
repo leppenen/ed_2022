@@ -41,7 +41,7 @@ const isSolution3Shown = computed(() => (
           <!-- ! Не забыть заполнить href -->
           <LinkWrapper
             v-show='isSolution1Shown'
-            href='solve1'
+            :href='solve1'
             target='_blank'
           >
             Решение №1
