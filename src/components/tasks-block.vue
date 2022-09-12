@@ -2,6 +2,7 @@
 import PageBlock from '@/components/ui/page-block.vue';
 import task1 from '@/assets/files/tasks/e1_2022.pdf'
 import task2 from '@/assets/files/tasks/e2.pdf'
+import task3 from '@/assets/files/tasks/e_3.pdf'
 // import solve1 from '@/assets/files/tasks/e1a.pdf'
 import LinkWrapper from './ui/link-wrapper.vue';
 import BadgeWrapper from './ui/badge-wrapper.vue';
@@ -20,6 +21,9 @@ const isSolution1Shown = computed(() => (
 
 const isSolution2Shown = computed(() => (
   new Date() > createDate(2022, 9, 14, 0, 5)
+))
+const isSolution3Shown = computed(() => (
+  new Date() > createDate(2022, 9, 20, 0, 5)
 ))
 </script>
 
@@ -54,6 +58,19 @@ const isSolution2Shown = computed(() => (
             target='_blank'
           >
             Решение №2
+          </LinkWrapper>&nbsp;
+        </li>
+        <li>
+          <LinkWrapper :href='task3' target='_blank'>Задание №3</LinkWrapper>&nbsp;
+          <BadgeWrapper v-show='!isSolution2Shown'>Дедлайн: 19.09.2022 23:59 </BadgeWrapper>&nbsp;
+
+          <!-- ! Не забыть заполнить href -->
+          <LinkWrapper
+            v-show='isSolution3Shown'
+            href=''
+            target='_blank'
+          >
+            Решение №3
           </LinkWrapper>&nbsp;
         </li>
       </ul>
