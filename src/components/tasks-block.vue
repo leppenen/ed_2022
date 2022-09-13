@@ -5,6 +5,7 @@ import task2 from '@/assets/files/tasks/e2.pdf'
 import task3 from '@/assets/files/tasks/e_3.pdf'
 import task4 from '@/assets/files/tasks/e4.pdf'
 import solve1 from '@/assets/files/tasks/e1a.pdf'
+import solve2 from '@/assets/files/tasks/e2a.pdf'
 import LinkWrapper from './ui/link-wrapper.vue';
 import BadgeWrapper from './ui/badge-wrapper.vue';
 import {computed} from "vue";
@@ -58,7 +59,7 @@ const isSolution4Shown = computed(() => (
           <!-- ! Не забыть заполнить href -->
           <LinkWrapper
             v-show='isSolution2Shown'
-            href=''
+            :href='solve2'
             target='_blank'
           >
             Решение №2
