@@ -67,7 +67,7 @@ const isSolution4Shown = computed(() => (
         </li>
         <li>
           <LinkWrapper :href='task3' target='_blank'>Задание №3</LinkWrapper>&nbsp;
-          <BadgeWrapper v-show='!isSolution2Shown'>Дедлайн: 19.09.2022 23:59 </BadgeWrapper>&nbsp;
+          <BadgeWrapper v-show='!isSolution3Shown'>Дедлайн: 19.09.2022 23:59 </BadgeWrapper>&nbsp;
 
           <!-- ! Не забыть заполнить href -->
           <LinkWrapper
@@ -84,11 +84,11 @@ const isSolution4Shown = computed(() => (
 
           <!-- ! Не забыть заполнить href -->
           <LinkWrapper
-            v-show='isSolution2Shown'
+            v-show='isSolution4Shown'
             href=''
             target='_blank'
           >
-            Решение №2
+            Решение №4
           </LinkWrapper>&nbsp;
         </li>
       </ul>
