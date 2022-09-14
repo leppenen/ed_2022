@@ -7,7 +7,6 @@ import PageBlock from '@/components/ui/page-block.vue';
     <template v-slot:heading>
       Новости
     </template>
-    Поздравляем с новым учебным годом!
+    Лекций 19 и 20 сентября не будет. Следующая лекция состоится 26 сентября.
   </PageBlock>
 </template>
-
