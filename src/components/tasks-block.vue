@@ -4,6 +4,7 @@ import task1 from '@/assets/files/tasks/e1_2022.pdf'
 import task2 from '@/assets/files/tasks/e2.pdf'
 import task3 from '@/assets/files/tasks/e_3.pdf'
 import task4 from '@/assets/files/tasks/e4.pdf'
+import task5 from '@/assets/files/tasks/e5.pdf'
 import solve1 from '@/assets/files/tasks/e1a.pdf'
 import solve2 from '@/assets/files/tasks/e2a.pdf'
 import LinkWrapper from './ui/link-wrapper.vue';
@@ -29,6 +30,10 @@ const isSolution3Shown = computed(() => (
 ))
 const isSolution4Shown = computed(() => (
   new Date() > createDate(2022, 9, 27, 0, 5)
+))
+
+const isSolution5Shown = computed(() => (
+  new Date() > createDate(2022, 9, 28, 0, 5)
 ))
 </script>
 
@@ -89,6 +94,19 @@ const isSolution4Shown = computed(() => (
             target='_blank'
           >
             Решение №4
+          </LinkWrapper>&nbsp;
+        </li>
+        <li>
+          <LinkWrapper :href='task5' target='_blank'>Задание №5</LinkWrapper>&nbsp;
+          <BadgeWrapper v-show='!isSolution5Shown'>Дедлайн: 27.09.2022 23:59 </BadgeWrapper>&nbsp;
+
+          <!-- ! Не забыть заполнить href -->
+          <LinkWrapper
+            v-show='isSolution5Shown'
+            href=''
+            target='_blank'
+          >
+            Решение №5
           </LinkWrapper>&nbsp;
         </li>
       </ul>
