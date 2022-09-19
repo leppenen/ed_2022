@@ -22,6 +22,8 @@ import TasksBlock from './components/tasks-block.vue';
     <MaterialsBlock id="materials"/>
     <TasksBlock id="tasks"/>
 
+    <iframe :class='$style.table' src="https://docs.google.com/spreadsheets/d/e/2PACX-1vSw9_JZHp9RnJCSSh_MSnXaByLqy5CGJbnHMQU0znZAlqFeffa48B4-E2pZKsCvNF_RF4sQBCoHKdww/pubhtml?gid=0&amp;single=true&amp;widget=true&amp;headers=false"></iframe>
+
     <template v-slot:footer>
     </template>
   </PaddedPage>
@@ -29,7 +31,9 @@ import TasksBlock from './components/tasks-block.vue';
 
 <style module>
   .table {
+    margin-top: 2em;
     width: 100%;
     height: 340px;
+    border: none;
   }
 </style>
