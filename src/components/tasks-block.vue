@@ -27,7 +27,7 @@ const isSolution2Shown = computed(() => (
   new Date() > createDate(2022, 9, 14, 0, 5)
 ))
 const isSolution3Shown = computed(() => (
-  new Date() > createDate(2022, 9, 20, 0, 5)
+  new Date() > createDate(2022, 9, 20, 5, 5)
 ))
 const isSolution4Shown = computed(() => (
   new Date() > createDate(2022, 9, 27, 0, 5)
