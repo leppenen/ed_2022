@@ -10,35 +10,71 @@ import solve1 from '@/assets/files/tasks/e1a.pdf'
 import solve2 from '@/assets/files/tasks/e2a.pdf'
 import LinkWrapper from './ui/link-wrapper.vue';
 import BadgeWrapper from './ui/badge-wrapper.vue';
-import {computed} from "vue";
+
+export interface Task {
+  taskName: string
+  deadline: string
+  taskFilePath: string
+  solutionName: string
+  solutionFilePath: string
+  showSolution: boolean
+}
 
 const createDate = (year: number, month: number, day: number, hour?: number, minute?: number) => {
   // NOTE: month - 1 нужно, потому что месяцы в js с 0
   return new Date(year, month - 1, day, hour, minute)
 }
 
-const isSolution1Shown = computed(() => (
-  // new Date() - текущая дата
-  // createDate() принимает аргументы: год, месяц, день, час(опционально), минуты(опционально)
-  new Date() > createDate(2022, 9, 13, 0, 5)
-))
-
-const isSolution2Shown = computed(() => (
-  new Date() > createDate(2022, 9, 14, 0, 5)
-))
-const isSolution3Shown = computed(() => (
-  new Date() > createDate(2022, 9, 20, 5, 5)
-))
-const isSolution4Shown = computed(() => (
-  new Date() > createDate(2022, 9, 27, 0, 5)
-))
-
-const isSolution5Shown = computed(() => (
-  new Date() > createDate(2022, 9, 28, 0, 5)
-))
-const isSolution6Shown = computed(() => (
-  new Date() > createDate(2022, 9, 29, 0, 5)
-))
+const tasks: Task[] = [
+  {
+    taskName: 'Задание №1',
+    deadline: '12.09.2022 23:59',
+    taskFilePath: task1,
+    solutionName: 'Решение №1',
+    solutionFilePath: solve1,
+    showSolution: new Date() > createDate(2022, 9, 13, 0, 5),
+  },
+  {
+    taskName: 'Задание №2',
+    deadline: '13.09.2022 23:59',
+    taskFilePath: task2,
+    solutionName: 'Решение №2',
+    solutionFilePath: solve2,
+    showSolution: new Date() > createDate(2022, 9, 14, 0, 5),
+  },
+  {
+    taskName: 'Задание №3',
+    deadline: '19.09.2022 23:59',
+    taskFilePath: task3,
+    solutionName: 'Решение №3',
+    solutionFilePath: '',
+    showSolution: new Date() > createDate(2022, 9, 20, 5, 5),
+  },
+  {
+    taskName: 'Задание №4',
+    deadline: '26.09.2022 23:59',
+    taskFilePath: task4,
+    solutionName: 'Решение №4',
+    solutionFilePath: '',
+    showSolution: new Date() > createDate(2022, 9, 27, 0, 5),
+  },
+  {
+    taskName: 'Задание №5',
+    deadline: '27.09.2022 23:59',
+    taskFilePath: task5,
+    solutionName: 'Решение №5',
+    solutionFilePath: '',
+    showSolution: new Date() > createDate(2022, 9, 28, 0, 5),
+  },
+  {
+    taskName: 'Задание №6',
+    deadline: '28.09.2022 23:59',
+    taskFilePath: task6,
+    solutionName: 'Решение №6',
+    solutionFilePath: '',
+    showSolution: new Date() > createDate(2022, 9, 29, 0, 5),
+  },
+]
 </script>
 
   <template>
@@ -47,83 +83,24 @@ const isSolution6Shown = computed(() => (
         Задания
       </template>
       <ul>
-        <li>
-          <LinkWrapper :href='task1' target='_blank'>Задание №1</LinkWrapper>&nbsp;
-          <!-- Поменять в v-show='true' на v-show='false', чтобы скрыть и наоборот -->
-          <BadgeWrapper v-show='!isSolution1Shown'>Дедлайн: 12.09.2022 23:59</BadgeWrapper>&nbsp;
-
-          <!-- ! Не забыть заполнить href -->
+        <li v-for="(task, index) in tasks" :key='index'>
           <LinkWrapper
-            v-show='isSolution1Shown'
-            :href='solve1'
+            :href='task.taskFilePath'
             target='_blank'
           >
-            Решение №1
+            {{task.taskName}}
           </LinkWrapper>&nbsp;
-        </li>
-        <li>
-          <LinkWrapper :href='task2' target='_blank'>Задание №2</LinkWrapper>&nbsp;
-          <BadgeWrapper v-show='!isSolution2Shown'>Дедлайн: 13.09.2022 23:59 </BadgeWrapper>&nbsp;
-
-          <!-- ! Не забыть заполнить href -->
+          <BadgeWrapper
+            v-show='!task.showSolution'
+          >
+            Дедлайн: {{task.deadline}}
+          </BadgeWrapper>&nbsp;
           <LinkWrapper
-            v-show='isSolution2Shown'
-            :href='solve2'
+            v-show='task.showSolution'
+            :href='task.solutionFilePath'
             target='_blank'
           >
-            Решение №2
-          </LinkWrapper>&nbsp;
-        </li>
-        <li>
-          <LinkWrapper :href='task3' target='_blank'>Задание №3</LinkWrapper>&nbsp;
-          <BadgeWrapper v-show='!isSolution3Shown'>Дедлайн: 19.09.2022 23:59 </BadgeWrapper>&nbsp;
-
-          <!-- ! Не забыть заполнить href -->
-          <LinkWrapper
-            v-show='isSolution3Shown'
-            href=''
-            target='_blank'
-          >
-            Решение №3
-          </LinkWrapper>&nbsp;
-        </li>
-        <li>
-          <LinkWrapper :href='task4' target='_blank'>Задание №4</LinkWrapper>&nbsp;
-          <BadgeWrapper v-show='!isSolution4Shown'>Дедлайн: 26.09.2022 23:59 </BadgeWrapper>&nbsp;
-
-          <!-- ! Не забыть заполнить href -->
-          <LinkWrapper
-            v-show='isSolution4Shown'
-            href=''
-            target='_blank'
-          >
-            Решение №4
-          </LinkWrapper>&nbsp;
-        </li>
-        <li>
-          <LinkWrapper :href='task5' target='_blank'>Задание №5</LinkWrapper>&nbsp;
-          <BadgeWrapper v-show='!isSolution5Shown'>Дедлайн: 27.09.2022 23:59 </BadgeWrapper>&nbsp;
-
-          <!-- ! Не забыть заполнить href -->
-          <LinkWrapper
-            v-show='isSolution5Shown'
-            href=''
-            target='_blank'
-          >
-            Решение №5
-          </LinkWrapper>&nbsp;
-        </li>
-        <li>
-          <LinkWrapper :href='task6' target='_blank'>Задание №6</LinkWrapper>&nbsp;
-          <BadgeWrapper v-show='!isSolution6Shown'>Дедлайн: 28.09.2022 23:59 </BadgeWrapper>&nbsp;
-
-          <!-- ! Не забыть заполнить href -->
-          <LinkWrapper
-            v-show='isSolution6Shown'
-            href=''
-            target='_blank'
-          >
-            Решение №6
+            {{task.solutionName}}
           </LinkWrapper>&nbsp;
         </li>
       </ul>
