@@ -6,6 +6,7 @@ import task3 from '@/assets/files/tasks/e_3.pdf'
 import task4 from '@/assets/files/tasks/e4.pdf'
 import task5 from '@/assets/files/tasks/e5.pdf'
 import task6 from '@/assets/files/tasks/e6.pdf'
+import task6 from '@/assets/files/tasks/e7.pdf'
 import solve1 from '@/assets/files/tasks/e1a.pdf'
 import solve2 from '@/assets/files/tasks/e2a.pdf'
 import solve3 from '@/assets/files/tasks/e3a.pdf'
@@ -65,7 +66,7 @@ const tasks: Task[] = [
     taskFilePath: task5,
     solutionName: 'Решение №5',
     solutionFilePath: '',
-    showSolution: new Date() > createDate(2022, 9, 28, 0, 5),
+    showSolution: new Date() > createDate(2022, 9, 28, 18, 5),
   },
   {
     taskName: 'Задание №6',
@@ -74,6 +75,14 @@ const tasks: Task[] = [
     solutionName: 'Решение №6',
     solutionFilePath: '',
     showSolution: new Date() > createDate(2022, 9, 29, 0, 5),
+  },
+  {
+    taskName: 'Задание №7',
+    deadline: '03.10.2022 23:59',
+    taskFilePath: task6,
+    solutionName: 'Решение №7',
+    solutionFilePath: '',
+    showSolution: new Date() > createDate(2022, 10, 4, 0, 5),
   },
 ]
 </script>
