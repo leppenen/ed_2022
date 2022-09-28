@@ -7,6 +7,8 @@ import task4 from '@/assets/files/tasks/e4.pdf'
 import task5 from '@/assets/files/tasks/e5.pdf'
 import task6 from '@/assets/files/tasks/e6.pdf'
 import task7 from '@/assets/files/tasks/e7.pdf'
+import task8 from '@/assets/files/tasks/e8.pdf'
+import task9 from '@/assets/files/tasks/e9.pdf'
 import solve1 from '@/assets/files/tasks/e1a.pdf'
 import solve2 from '@/assets/files/tasks/e2a.pdf'
 import solve3 from '@/assets/files/tasks/e3a.pdf'
@@ -84,6 +86,22 @@ const tasks: Task[] = [
     solutionFilePath: '',
     showSolution: new Date() > createDate(2022, 10, 4, 0, 5),
   },
+  {
+    taskName: 'Задание №8',
+    deadline: '10.10.2022 23:59',
+    taskFilePath: task8,
+    solutionName: 'Решение №8',
+    solutionFilePath: '',
+    showSolution: new Date() > createDate(2022, 10, 11, 0, 5),
+  },
+  {
+      taskName: 'Задание №9',
+      deadline: '11.10.2022 23:59',
+      taskFilePath: task9,
+      solutionName: 'Решение №9',
+      solutionFilePath: '',
+      showSolution: new Date() > createDate(2022, 10, 12, 0, 5),
+    },
 ]
 </script>
 
