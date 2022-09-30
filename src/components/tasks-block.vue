@@ -60,7 +60,7 @@ const tasks: Task[] = [
     taskFilePath: task4,
     solutionName: 'Решение №4',
     solutionFilePath: '',
-    showSolution: new Date() > createDate(2022, 9, 29, 18, 5),
+    showSolution: new Date() > createDate(2022, 10, 4, 18, 5),
   },
   {
     taskName: 'Задание №5',
@@ -68,7 +68,7 @@ const tasks: Task[] = [
     taskFilePath: task5,
     solutionName: 'Решение №5',
     solutionFilePath: '',
-    showSolution: new Date() > createDate(2022, 9, 29, 18, 5),
+    showSolution: new Date() > createDate(2022, 10, 4, 18, 5),
   },
   {
     taskName: 'Задание №6',
@@ -76,7 +76,7 @@ const tasks: Task[] = [
     taskFilePath: task6,
     solutionName: 'Решение №6',
     solutionFilePath: '',
-    showSolution: new Date() > createDate(2022, 9, 29, 18, 5),
+    showSolution: new Date() > createDate(2022, 10, 4, 18, 5),
   },
   {
     taskName: 'Задание №7',
