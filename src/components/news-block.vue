@@ -7,6 +7,7 @@ import PageBlock from '@/components/ui/page-block.vue';
     <template v-slot:heading>
       Новости
     </template>
+    <p>Лекций 3 и 4 октрября не будет.</p>
     <p>Выложены баллы за задания 1, 2 и 3. Вопросы по оценкам можно будет задать после занятия 27 сентября.</p>
   </PageBlock>
 </template>
