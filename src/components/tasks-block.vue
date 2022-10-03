@@ -60,7 +60,7 @@ const tasks: Task[] = [
     deadline: '26.09.2022 23:59',
     taskFilePath: task4,
     solutionName: 'Решение №4',
-    solutionFilePath: 'solve4',
+    solutionFilePath: solve4,
     showSolution: new Date() > createDate(2022, 10, 3, 18, 5),
   },
   {
@@ -85,7 +85,7 @@ const tasks: Task[] = [
     taskFilePath: task7,
     solutionName: 'Решение №7',
     solutionFilePath: '',
-    showSolution: new Date() > createDate(2022, 10, 4, 0, 5),
+    showSolution: new Date() > createDate(2022, 10, 6, 18, 5),
   },
   {
     taskName: 'Задание №8',
