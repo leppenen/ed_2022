@@ -87,7 +87,7 @@ const tasks: Task[] = [
     taskFilePath: task7,
     solutionName: 'Решение №7',
     solutionFilePath: '',
-    showSolution: new Date() > createDate(2022, 10, 6, 18, 5),
+    showSolution: new Date() > createDate(2022, 10, 11, 18, 5),
   },
   {
     taskName: 'Задание №8',
