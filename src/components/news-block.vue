@@ -7,6 +7,6 @@ import PageBlock from '@/components/ui/page-block.vue';
     <template v-slot:heading>
       Новости
     </template>
-    <p>18 октрября состоится контрольная работа по первой части курса</p>
+    <p>18 октября состоится контрольная работа по первой части курса</p>
   </PageBlock>
 </template>
