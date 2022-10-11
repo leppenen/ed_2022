@@ -10,6 +10,7 @@ import task7 from '@/assets/files/tasks/e7.pdf'
 import task8 from '@/assets/files/tasks/e8.pdf'
 import task9 from '@/assets/files/tasks/e9.pdf'
 import task10 from '@/assets/files/tasks/e10.pdf'
+import task11 from '@/assets/files/tasks/e11.pdf'
 import solve1 from '@/assets/files/tasks/e1a.pdf'
 import solve2 from '@/assets/files/tasks/e2a.pdf'
 import solve3 from '@/assets/files/tasks/e3a.pdf'
@@ -97,7 +98,7 @@ const tasks: Task[] = [
     taskFilePath: task8,
     solutionName: 'Решение №8',
     solutionFilePath: '',
-    showSolution: new Date() > createDate(2022, 10, 11, 0, 5),
+    showSolution: new Date() > createDate(2022, 10, 19, 0, 5),
   },
   {
       taskName: 'Задание №9',
@@ -105,16 +106,24 @@ const tasks: Task[] = [
       taskFilePath: task9,
       solutionName: 'Решение №9',
       solutionFilePath: '',
-      showSolution: new Date() > createDate(2022, 10, 12, 0, 5),
+      showSolution: new Date() > createDate(2022, 10, 19, 0, 5),
     },
     {
         taskName: 'Задание №10',
         deadline: '17.10.2022 23:59',
         taskFilePath: task10,
-        solutionName: 'Решение №9',
+        solutionName: 'Решение №10',
         solutionFilePath: '',
         showSolution: new Date() > createDate(2022, 10, 19, 0, 5),
       },
+      {
+          taskName: 'Задание №11',
+          deadline: '17.10.2022 23:59',
+          taskFilePath: task11,
+          solutionName: 'Решение №11',
+          solutionFilePath: '',
+          showSolution: new Date() > createDate(2022, 10, 19, 0, 5),
+        },
 ]
 </script>
 
