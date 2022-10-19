@@ -21,7 +21,7 @@ import solve6 from '@/assets/files/tasks/e6a.pdf'
 import solve7 from '@/assets/files/tasks/e7a.pdf'
 import solve8 from '@/assets/files/tasks/e8a.pdf'
 import solve9 from '@/assets/files/tasks/e9a.pdf'
-import solve9 from '@/assets/files/tasks/e10a_2.pdf'
+import solve10 from '@/assets/files/tasks/e10a_2.pdf'
 import solve11 from '@/assets/files/tasks/e11a.pdf'
 import LinkWrapper from './ui/link-wrapper.vue';
 import BadgeWrapper from './ui/badge-wrapper.vue';
