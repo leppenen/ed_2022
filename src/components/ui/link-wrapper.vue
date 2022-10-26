@@ -10,6 +10,7 @@
     :class=$style.link
     :href='href'
     :target='target'
+    rel='noreferrer'
   >
     <slot></slot>
   </a>
