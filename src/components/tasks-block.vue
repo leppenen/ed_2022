@@ -11,6 +11,7 @@ import task8 from '@/assets/files/tasks/e8.pdf'
 import task9 from '@/assets/files/tasks/e9.pdf'
 import task10 from '@/assets/files/tasks/e10.pdf'
 import task11 from '@/assets/files/tasks/e11.pdf'
+import test1 from '@/assets/files/tasks/test1new_NL.pdf'
 import task12 from '@/assets/files/tasks/e12.pdf'
 import task13 from '@/assets/files/tasks/e13.pdf'
 import task14 from '@/assets/files/tasks/e14.pdf'
@@ -25,6 +26,7 @@ import solve8 from '@/assets/files/tasks/e8a.pdf'
 import solve9 from '@/assets/files/tasks/e9a.pdf'
 import solve10 from '@/assets/files/tasks/e10a_2.pdf'
 import solve11 from '@/assets/files/tasks/e11a.pdf'
+import solve_test1 from '@/assets/files/tasks/test1_sol.pdf'
 import LinkWrapper from './ui/link-wrapper.vue';
 import BadgeWrapper from './ui/badge-wrapper.vue';
 
@@ -129,6 +131,14 @@ const tasks: Task[] = [
     taskFilePath: task11,
     solutionName: 'Решение №11',
     solutionFilePath: solve11,
+    showSolution: new Date() > createDate(2022, 10, 18, 0, 5),
+  },
+  {
+    taskName: 'Контрольная работа №1',
+    deadline: '17.10.2022 23:59',
+    taskFilePath: test1,
+    solutionName: 'Решение',
+    solutionFilePath: solve_test1,
     showSolution: new Date() > createDate(2022, 10, 18, 0, 5),
   },
   {
