@@ -28,6 +28,8 @@ import solve8 from '@/assets/files/tasks/e8a.pdf'
 import solve9 from '@/assets/files/tasks/e9a.pdf'
 import solve10 from '@/assets/files/tasks/e10a_2.pdf'
 import solve11 from '@/assets/files/tasks/e11a.pdf'
+import solve13 from '@/assets/files/tasks/e13a.pdf'
+import solve14 from '@/assets/files/tasks/e14a.pdf'
 import solve_test1 from '@/assets/files/tasks/test1_sol.pdf'
 import LinkWrapper from './ui/link-wrapper.vue';
 import BadgeWrapper from './ui/badge-wrapper.vue';
@@ -156,16 +158,16 @@ const tasks: Task[] = [
     deadline: '31.10.2022 23:59',
     taskFilePath: task13,
     solutionName: 'Решение №13',
-    solutionFilePath: '',
-    showSolution: new Date() > createDate(2022, 11, 10, 0, 5),
+    solutionFilePath: solve13,
+    showSolution: new Date() > createDate(2022, 11, 5, 0, 5),
   },
   {
     taskName: 'Задание №14',
     deadline: '1.11.2022 23:59',
     taskFilePath: task14,
     solutionName: 'Решение №14',
-    solutionFilePath: '',
-    showSolution: new Date() > createDate(2022, 11, 10, 0, 5),
+    solutionFilePath: solve14,
+    showSolution: new Date() > createDate(2022, 11, 5, 0, 5),
   },
   {
     taskName: 'Задание №15',
