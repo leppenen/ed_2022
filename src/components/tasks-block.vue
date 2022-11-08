@@ -18,6 +18,7 @@ import task14 from '@/assets/files/tasks/e14.pdf'
 import task15 from '@/assets/files/tasks/e15.pdf'
 import task16 from '@/assets/files/tasks/e16.pdf'
 import task17 from '@/assets/files/tasks/e17.pdf'
+import task18 from '@/assets/files/tasks/e18.pdf'
 import solve1 from '@/assets/files/tasks/e1a.pdf'
 import solve2 from '@/assets/files/tasks/e2a.pdf'
 import solve3 from '@/assets/files/tasks/e3a.pdf'
@@ -192,7 +193,15 @@ const tasks: Task[] = [
     taskFilePath: task17,
     solutionName: 'Решение №17',
     solutionFilePath: '',
-    showSolution: new Date() > createDate(2022, 11, 15, 0, 5),
+    showSolution: new Date() > createDate(2022, 11, 20, 0, 5),
+  },
+  {
+    taskName: 'Задание №18',
+    deadline: '15.11.2022 23:59',
+    taskFilePath: task18,
+    solutionName: 'Решение №18',
+    solutionFilePath: '',
+    showSolution: new Date() > createDate(2022, 11, 20, 0, 5),
   },
 ]
 </script>
