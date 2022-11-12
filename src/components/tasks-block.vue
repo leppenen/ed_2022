@@ -32,6 +32,7 @@ import solve10 from '@/assets/files/tasks/e10a_2.pdf'
 import solve11 from '@/assets/files/tasks/e11a.pdf'
 import solve13 from '@/assets/files/tasks/e13a.pdf'
 import solve14 from '@/assets/files/tasks/e14a.pdf'
+import solve15 from '@/assets/files/tasks/e15a.pdf'
 import solve_test1 from '@/assets/files/tasks/test1_sol.pdf'
 import LinkWrapper from './ui/link-wrapper.vue';
 import BadgeWrapper from './ui/badge-wrapper.vue';
@@ -176,7 +177,7 @@ const tasks: Task[] = [
     deadline: '7.11.2022 23:59',
     taskFilePath: task15,
     solutionName: 'Решение №15',
-    solutionFilePath: '',
+    solutionFilePath: solve15,
     showSolution: new Date() > createDate(2022, 11, 10, 0, 5),
   },
   {
