@@ -19,6 +19,7 @@ import task15 from '@/assets/files/tasks/e15.pdf'
 import task16 from '@/assets/files/tasks/e16.pdf'
 import task17 from '@/assets/files/tasks/e17.pdf'
 import task18 from '@/assets/files/tasks/e18.pdf'
+import task19 from '@/assets/files/tasks/e19.pdf'
 import solve1 from '@/assets/files/tasks/e1a.pdf'
 import solve2 from '@/assets/files/tasks/e2a.pdf'
 import solve3 from '@/assets/files/tasks/e3a.pdf'
@@ -33,6 +34,7 @@ import solve11 from '@/assets/files/tasks/e11a.pdf'
 import solve13 from '@/assets/files/tasks/e13a.pdf'
 import solve14 from '@/assets/files/tasks/e14a.pdf'
 import solve15 from '@/assets/files/tasks/e15a.pdf'
+import solve16 from '@/assets/files/tasks/e16a.pdf'
 import solve_test1 from '@/assets/files/tasks/test1_sol.pdf'
 import LinkWrapper from './ui/link-wrapper.vue';
 import BadgeWrapper from './ui/badge-wrapper.vue';
@@ -185,7 +187,7 @@ const tasks: Task[] = [
     deadline: '8.11.2022 23:59',
     taskFilePath: task16,
     solutionName: 'Решение №16',
-    solutionFilePath: '',
+    solutionFilePath: solve16,
     showSolution: new Date() > createDate(2022, 11, 10, 0, 5),
   },
   {
@@ -203,6 +205,14 @@ const tasks: Task[] = [
     solutionName: 'Решение №18',
     solutionFilePath: '',
     showSolution: new Date() > createDate(2022, 11, 20, 0, 5),
+  },
+  {
+    taskName: 'Задание №19',
+    deadline: '21.11.2022 23:59',
+    taskFilePath: task19,
+    solutionName: 'Решение №19',
+    solutionFilePath: '',
+    showSolution: new Date() > createDate(2022, 11, 25, 0, 5),
   },
 ]
 </script>
