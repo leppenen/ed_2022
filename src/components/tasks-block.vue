@@ -217,7 +217,7 @@ const tasks: Task[] = [
   },
   {
     taskName: 'Задание №20',
-    deadline: '22.11.2022 23:59',
+    deadline: '21.11.2022 23:59',
     taskFilePath: task20,
     solutionName: 'Решение №20',
     solutionFilePath: '',
