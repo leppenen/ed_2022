@@ -20,16 +20,20 @@ const navigationItems: NavigationItemT[] = [
     target: '#rules'
   },
   {
+    title: 'Задания',
+    target: '#tasks'
+  },
+  {
+    title: 'Таблица успеваемости',
+    target: '#progress-table'
+  },
+  {
     title: 'Преподаватели',
     target: '#teachers'
   },
   {
     title: 'Материалы',
     target: '#materials'
-  },
-  {
-    title: 'Задания',
-    target: '#tasks'
   },
 ]
 </script>
