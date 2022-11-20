@@ -18,10 +18,12 @@
 
 <style module>
 .link {
-  text-decoration-color: var(--textSecondary);
+  text-decoration: none;
   color: inherit;
   width: fit-content;
+  position: relative;
 }
+
 .link:hover {
   color: var(--textSecondary);
 }

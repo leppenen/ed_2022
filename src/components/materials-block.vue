@@ -1,16 +1,15 @@
 <script setup lang='ts'>
 import PageBlock from '@/components/ui/page-block.vue';
+import LinkWrapper from './ui/link-wrapper.vue'
 import coursePlan from '@/assets/files/materials/course_plan.pdf'
 import references from '@/assets/files/materials/references.pdf'
-import LinkWrapper from './ui/link-wrapper.vue'
 </script>
 
   <template>
-    <PageBlock>
-      <template v-slot:heading>
-        Материалы
-      </template>
-
+    <PageBlock
+      can-collapse
+      title='Материалы'
+    >
       <ul>
         <li>
           <LinkWrapper

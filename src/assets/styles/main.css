@@ -1,38 +1,55 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Roboto&family=Roboto+Condensed:wght@300;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400;700&display=swap');
+
+*, :after, :before {
+  box-sizing: border-box;
+  word-break: break-word;
+}
 
 :root {
+  /* Colors */
   --bgPrimary: #222;
   --bgSecondary: #080708;
   --bgSidebar: #3C3C3C;
+  --hovered: #d8d8d8;
   --textPrimary: #E6E8E6;
   --textSecondary: #FDCA40;
+  --info: #3f74c4;
+  --alert: #c43f4a;
+  --warning: #FDCA40;
+  --success: #71B960;
+  /* Breakpoints */
   --phoneUpperBoundary: 600px;
   --tabletUpperBoundary: 1200px;
   --monospaceFont: 'Roboto Mono', monospace;
   --textShadow: 0 0 4px;
   font-family: 'Roboto Condensed', sans-serif;
   color: var(--textPrimary);
-  font-size: 20px;
+  line-height: 1.6em;
 }
 
 body {
-  min-width: 400px;
+  min-width: 360px;
   background: var(--bgSecondary);
 }
 
+p, h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+}
+
+button {
+  background: none;
+  border: none;
+  outline: none;
+  color: inherit;
+  padding: 0;
+}
+
 ul {
-  line-height: 1.6em;
+  margin: 0;
   padding-left: 1.2em;
 }
 
 @media screen and (max-width: 1200px) {
-  :root {
-    font-size: 18px;
-  }
 }
 
-*, :after, :before {
-  box-sizing: border-box;
-  word-break: break-word;
-}

@@ -1,9 +1,37 @@
 <script setup lang='ts'>
 import { defineEmits } from 'vue';
 import LinkWrapper from '@/components/ui/link-wrapper.vue';
-import NavigationLinks from './navigation-links.vue';
+import NavigationItem from './navigation-item.vue';
 
 defineEmits(['burgerClick'])
+
+type NavigationItemT = {
+  title: string
+  target: string
+}
+
+const navigationItems: NavigationItemT[] = [
+  {
+    title: 'Новости',
+    target: '#news'
+  },
+  {
+    title: 'Правила курса',
+    target: '#rules'
+  },
+  {
+    title: 'Преподаватели',
+    target: '#teachers'
+  },
+  {
+    title: 'Материалы',
+    target: '#materials'
+  },
+  {
+    title: 'Задания',
+    target: '#tasks'
+  },
+]
 </script>
 
 <template>
@@ -15,8 +43,13 @@ defineEmits(['burgerClick'])
     >
       <img src='@/assets/images/au-logo.svg' :class=$style.logo>
     </LinkWrapper>
-    <nav :class=$style.navigationLinks>
-      <NavigationLinks />
+    <nav :class=$style.navigationItems>
+      <NavigationItem
+        v-for='({target, title}, index) in navigationItems'
+        :key='index'
+        :target='target'
+        :title='title'
+      />
     </nav>
     <img
       @click="$emit('burgerClick')"
@@ -40,18 +73,17 @@ defineEmits(['burgerClick'])
     display: flex;
     gap: 40px;
   }
-  .navigationLinks {
+  .navigationItems {
     width: 100%;;
     display: flex;
     justify-content: space-between;
   }
-
   .burger {
     display: none;
   }
 
   @media screen and (max-width: 1200px) {
-    .navigationLinks {
+    .navigationItems {
       display: none;
     }
     .burger {

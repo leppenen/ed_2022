@@ -1,9 +1,49 @@
+<script lang='ts' setup>
+import chevron from '@/assets/images/chevron.svg'
+import { ref } from 'vue';
+
+const props = defineProps({
+  title: {
+    type: String,
+    required: true
+  },
+  canCollapse: {
+    type: Boolean,
+    default: false
+  },
+  isInitiallyShown: {
+    type: Boolean,
+    default: false
+  },
+})
+
+const isShown = ref(props.canCollapse ? props.isInitiallyShown : true)
+
+function toggleShown() {
+  if (!props.canCollapse) return
+
+  isShown.value = !isShown.value
+}
+</script>
+
 <template>
   <div :class=$style.pageBlock>
-    <h1 :class=$style.heading>
-      <slot name='heading'></slot>
-    </h1>
-    <div :class=$style.main>
+    <button
+      @click='toggleShown'
+      :class='[$style.heading, canCollapse ? $style.clickable : undefined]'
+      :disabled='!canCollapse'
+    >
+      {{ title }}
+      <img
+        v-if='canCollapse'
+        :class='[$style.chevron, isShown ? undefined : $style.rotated]'
+        :src='chevron'
+      >
+  </button>
+    <div
+      v-show='isShown'
+      :class='$style.blockContent'
+    >
       <slot></slot>
     </div>
   </div>
@@ -13,11 +53,26 @@
 .pageBlock {
   width: 100%;
   box-sizing: border-box;
-  /* Необходимо для правильного отрабатывания якорной ссылки  */
-  padding-top: 55px;
-  margin-top: -55px;
 }
 .heading {
   text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+  font-size: 2rem;
+  font-weight: bold;
+}
+.chevron {
+  width: 0.6em;
+  cursor: pointer;
+}
+.clickable {
+  cursor: pointer;
+}
+.rotated {
+  transform: rotate(180deg);
+}
+.blockContent {
+  margin-top: 16px;
 }
 </style>

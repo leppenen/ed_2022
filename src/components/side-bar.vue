@@ -1,6 +1,6 @@
 <script setup lang='ts'>
 import LinkWrapper from '@/components/ui/link-wrapper.vue';
-import NavigationLinks from './navigation-links.vue';
+import NavigationLinks from './navigation-item.vue';
 defineProps({
   isShown: {
     type: Boolean,

@@ -6,10 +6,10 @@
 </script>
 
 <template>
-  <PageBlock>
-    <template v-slot:heading>
-      Преподаватели
-    </template>
+  <PageBlock
+    title='Преподаватели'
+    can-collapse
+  >
     <div :class=$style.teachers>
       <TeacherCard
         full-name='Александр Валерьевич Пошакинский'

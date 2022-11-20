@@ -6,11 +6,11 @@
 
 <style module>
 .badge {
-  padding: 0.1em 0.6em;
+  padding: 0.1em 0.3em;
   width: fit-content;
   box-sizing: border-box;
-  background: var(--bgSecondary);
-  border-radius: 0.6em;
-  color: var(--textSecondary);
+  background: var(--textPrimary);
+  border-radius: 0.4em;
+  color: var(--bgPrimary);
 }
 </style>

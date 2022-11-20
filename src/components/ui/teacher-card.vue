@@ -1,7 +1,7 @@
 <script setup lang='ts'>
 import LinkWrapper from "./link-wrapper.vue";
-import BadgeWrapper from "./badge-wrapper.vue";
-import CopiedText from "./copied-text.vue";
+import Badge from "./badge.vue";
+import CopyText from "./copy-text.vue";
   defineProps({
     fullName: {
       type: String,
@@ -29,10 +29,10 @@ import CopiedText from "./copied-text.vue";
       <div>
         {{ fullName }}
       </div>
-      <BadgeWrapper>
+      <Badge>
         {{ exerciseType }}
-      </BadgeWrapper>
-      <CopiedText :text="email" />
+      </Badge>
+      <CopyText :text="email" />
       <LinkWrapper
         :href=graduated.link
         target='_blank'

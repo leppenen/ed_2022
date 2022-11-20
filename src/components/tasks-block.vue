@@ -37,16 +37,13 @@ import solve14 from '@/assets/files/tasks/e14a.pdf'
 import solve15 from '@/assets/files/tasks/e15a.pdf'
 import solve16 from '@/assets/files/tasks/e16a.pdf'
 import solve_test1 from '@/assets/files/tasks/test1_sol.pdf'
-import LinkWrapper from './ui/link-wrapper.vue';
-import BadgeWrapper from './ui/badge-wrapper.vue';
+import TaskCard from './task-card.vue';
 
 export interface Task {
   taskName: string
-  deadline: string
   taskFilePath: string
-  solutionName: string
+  deadline: Date
   solutionFilePath: string
-  showSolution: boolean
 }
 
 const createDate = (year: number, month: number, day: number, hour?: number, minute?: number) => {
@@ -54,204 +51,163 @@ const createDate = (year: number, month: number, day: number, hour?: number, min
   return new Date(year, month - 1, day, hour, minute)
 }
 
+const createDeadlineDate = (year: number, month: number, day: number) => {
+  return createDate(year, month, day, 23, 59)
+}
+
 const tasks: Task[] = [
   {
     taskName: 'Задание №1',
-    deadline: '12.09.2022 23:59',
+    deadline: createDeadlineDate(2022, 9, 12),
     taskFilePath: task1,
-    solutionName: 'Решение №1',
     solutionFilePath: solve1,
-    showSolution: new Date() > createDate(2022, 9, 13, 0, 5),
   },
   {
     taskName: 'Задание №2',
-    deadline: '13.09.2022 23:59',
+    deadline: createDeadlineDate(2022, 9, 13),
     taskFilePath: task2,
-    solutionName: 'Решение №2',
     solutionFilePath: solve2,
-    showSolution: new Date() > createDate(2022, 9, 14, 0, 5),
   },
   {
     taskName: 'Задание №3',
-    deadline: '19.09.2022 23:59',
+    deadline: createDeadlineDate(2022, 9, 19),
     taskFilePath: task3,
-    solutionName: 'Решение №3',
     solutionFilePath: solve3,
-    showSolution: new Date() > createDate(2022, 9, 20, 5, 5),
   },
   {
     taskName: 'Задание №4',
-    deadline: '26.09.2022 23:59',
+    deadline: createDeadlineDate(2022, 9, 26),
     taskFilePath: task4,
-    solutionName: 'Решение №4',
     solutionFilePath: solve4,
-    showSolution: new Date() > createDate(2022, 10, 3, 18, 5),
   },
   {
     taskName: 'Задание №5',
-    deadline: '27.09.2022 23:59',
+    deadline: createDeadlineDate(2022, 9, 27),
     taskFilePath: task5,
-    solutionName: 'Решение №5',
     solutionFilePath: solve5,
-    showSolution: new Date() > createDate(2022, 10, 4, 9, 30),
   },
   {
     taskName: 'Задание №6',
-    deadline: '28.09.2022 23:59',
+    deadline: createDeadlineDate(2022, 9, 28),
     taskFilePath: task6,
-    solutionName: 'Решение №6',
     solutionFilePath: solve6,
-    showSolution: new Date() > createDate(2022, 10, 4, 18, 5),
   },
   {
     taskName: 'Задание №7',
-    deadline: '03.10.2022 23:59',
+    deadline: createDeadlineDate(2022, 10, 3),
     taskFilePath: task7,
-    solutionName: 'Решение №7',
     solutionFilePath: solve7,
-    showSolution: new Date() > createDate(2022, 10, 10, 23, 30),
   },
   {
     taskName: 'Задание №8',
-    deadline: '10.10.2022 23:59',
+    deadline: createDeadlineDate(2022, 10, 10),
     taskFilePath: task8,
-    solutionName: 'Решение №8',
     solutionFilePath: solve8,
-    showSolution: new Date() > createDate(2022, 10, 12, 15, 55),
   },
   {
     taskName: 'Задание №9',
-    deadline: '11.10.2022 23:59',
+    deadline: createDeadlineDate(2022, 10, 11),
     taskFilePath: task9,
-    solutionName: 'Решение №9',
     solutionFilePath: solve9,
-    showSolution: new Date() > createDate(2022, 10, 12, 15, 55),
   },
   {
     taskName: 'Задание №10',
-    deadline: '17.10.2022 23:59',
+    deadline: createDeadlineDate(2022, 10, 17),
     taskFilePath: task10,
-    solutionName: 'Решение №10',
     solutionFilePath: solve10,
-    showSolution: new Date() > createDate(2022, 10, 19, 0, 5),
   },
   {
     taskName: 'Задание №11',
-    deadline: '17.10.2022 23:59',
+    deadline: createDeadlineDate(2022, 10, 17),
     taskFilePath: task11,
-    solutionName: 'Решение №11',
     solutionFilePath: solve11,
-    showSolution: new Date() > createDate(2022, 10, 18, 0, 5),
   },
   {
     taskName: 'Контрольная работа №1',
-    deadline: '17.10.2022 23:59',
+    deadline: createDeadlineDate(2022, 10, 17),
     taskFilePath: test1,
-    solutionName: 'Решение',
     solutionFilePath: solve_test1,
-    showSolution: new Date() > createDate(2022, 10, 18, 0, 5),
   },
   {
     taskName: 'Задание №12',
-    deadline: '25.10.2022 23:59',
+    deadline: createDeadlineDate(2022, 10, 25),
     taskFilePath: task12,
-    solutionName: 'Решение №12',
     solutionFilePath: 'https://colab.research.google.com/drive/1N6kxRYOqKWsGZPQ-dWjLzEizd_dyft6V?usp=sharing',
-    showSolution: new Date() > createDate(2022, 10, 26, 0, 5),
   },
   {
     taskName: 'Задание №13',
-    deadline: '31.10.2022 23:59',
+    deadline: createDeadlineDate(2022, 10, 31),
     taskFilePath: task13,
-    solutionName: 'Решение №13',
     solutionFilePath: solve13,
-    showSolution: new Date() > createDate(2022, 11, 5, 0, 5),
   },
   {
     taskName: 'Задание №14',
-    deadline: '1.11.2022 23:59',
+    deadline: createDeadlineDate(2022, 11, 1),
     taskFilePath: task14,
-    solutionName: 'Решение №14',
     solutionFilePath: solve14,
-    showSolution: new Date() > createDate(2022, 11, 5, 0, 5),
   },
   {
     taskName: 'Задание №15',
-    deadline: '7.11.2022 23:59',
+    deadline: createDeadlineDate(2022, 11, 7),
     taskFilePath: task15,
-    solutionName: 'Решение №15',
     solutionFilePath: solve15,
-    showSolution: new Date() > createDate(2022, 11, 10, 0, 5),
   },
   {
     taskName: 'Задание №16',
-    deadline: '8.11.2022 23:59',
+    deadline: createDeadlineDate(2022, 11, 8),
     taskFilePath: task16,
-    solutionName: 'Решение №16',
     solutionFilePath: solve16,
-    showSolution: new Date() > createDate(2022, 11, 10, 0, 5),
   },
   {
     taskName: 'Задание №17',
-    deadline: '14.11.2022 23:59',
+    deadline: createDeadlineDate(2022, 11, 14),
     taskFilePath: task17,
-    solutionName: 'Решение №17',
     solutionFilePath: '',
-    showSolution: new Date() > createDate(2022, 11, 20, 0, 5),
   },
   {
     taskName: 'Задание №18',
-    deadline: '15.11.2022 23:59',
+    deadline: createDeadlineDate(2022, 11, 15),
     taskFilePath: task18,
-    solutionName: 'Решение №18',
     solutionFilePath: '',
-    showSolution: new Date() > createDate(2022, 11, 20, 0, 5),
   },
   {
     taskName: 'Задание №19',
-    deadline: '21.11.2022 23:59',
+    deadline: createDeadlineDate(2022, 11, 21),
     taskFilePath: task19,
-    solutionName: 'Решение №19',
     solutionFilePath: '',
-    showSolution: new Date() > createDate(2022, 11, 25, 0, 5),
   },
   {
     taskName: 'Задание №20',
-    deadline: '21.11.2022 23:59',
+    deadline: createDeadlineDate(2022, 11, 21),
     taskFilePath: task20,
-    solutionName: 'Решение №20',
     solutionFilePath: '',
-    showSolution: new Date() > createDate(2022, 11, 25, 0, 5),
   },
 ]
 </script>
 
-  <template>
-    <PageBlock>
-      <template v-slot:heading>
-        Задания
-      </template>
-      <ul>
-        <li v-for="(task, index) in tasks" :key='index'>
-          <LinkWrapper
-            :href='task.taskFilePath'
-            target='_blank'
-          >
-            {{task.taskName}}
-          </LinkWrapper>&nbsp;
-          <BadgeWrapper
-            v-show='!task.showSolution'
-          >
-            Дедлайн: {{task.deadline}}
-          </BadgeWrapper>&nbsp;
-          <LinkWrapper
-            v-show='task.showSolution'
-            :href='task.solutionFilePath'
-            target='_blank'
-          >
-            {{task.solutionName}}
-          </LinkWrapper>&nbsp;
-        </li>
-      </ul>
-    </PageBlock>
-  </template>
+<template>
+  <PageBlock
+    can-collapse
+    is-initially-shown
+    title='Задания'
+  >
+    <div :class='$style.tasks'>
+      <TaskCard
+        v-for="(task, index) in tasks"
+        :key='index'
+        :deadline="task.deadline"
+        :solution-file-path='task.solutionFilePath'
+        :task-name='task.taskName'
+        :task-file-path='task.taskFilePath'
+      />
+    </div>
+  </PageBlock>
+</template>
+
+<style module>
+.tasks {
+  display: grid;
+  gap: 16px;
+  grid-template-columns: repeat(auto-fit, minmax(268px, 1fr));
+}
+</style>
