@@ -57,6 +57,7 @@ function toggleShown() {
 .heading {
   text-transform: uppercase;
   display: flex;
+  text-align: left;
   align-items: center;
   gap: 0.5em;
   font-size: 2rem;
