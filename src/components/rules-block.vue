@@ -17,10 +17,8 @@ import CopyText from './ui/copy-text.vue';
 
     <div :class='$style.block'>
       <div :class='$style.heading'>Домашние задания</div>
+      <p>Отправлять на почту <CopyText text='leppenen.au@gmail.com' /> до дедлайна</p>
       <ul>
-        <li>
-          Отправлять на почту <CopyText text='leppenen.au@gmail.com' /> до дедлайна
-        </li>
         <li>
           Формат решения задач LaTEX. Присылайте <Badge>.tex</Badge> и <Badge>.pdf</Badge> файлы
         </li>
@@ -28,11 +26,11 @@ import CopyText from './ui/copy-text.vue';
           Формат названия файла: <span :class=$style.highlighted>familiya_N.tex/familiya_N.pdf</span> , где <Badge>N</Badge> - номер задания.
           Пример: <span :class=$style.highlighted>Ivanov_1.tex/Ivanov_1.pdf</span>
         </li>
+        <li>
+          Формат темы письма <span :class=$style.highlighted>ED2022_HW_N</span>, где <Badge>N</Badge> - номер задания.
+          Пример: <span :class=$style.highlighted>ED2022_HW_1</span>
+        </li>
       </ul>
-      <p>
-        Формат темы письма <span :class=$style.highlighted>ED2022_HW_N</span>, где <Badge>N</Badge> - номер задания.
-        Пример: <span :class=$style.highlighted>ED2022_HW_1</span>
-      </p>
       <p>
         Вопросы по домашним заданиям присылайте на почту
         <CopyText text='leppenen.au@gmail.com' /> c темой:
@@ -57,11 +55,9 @@ import CopyText from './ui/copy-text.vue';
 <style module>
 .heading {
   font-size: 24px;
-  font-weight: bold;
-  margin-bottom: 4px;
 }
 .block {
-  margin-top: 12px;
+  margin-top: 20px;
 }
 .highlighted {
   font-family: var(--monospaceFont);

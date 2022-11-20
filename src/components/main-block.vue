@@ -14,23 +14,18 @@
 
 <style module>
   .title {
-    font-size: 4em;
+    font-size: 84px;
     font-weight: bold;
     text-transform: uppercase;
     word-break: break-word;
   }
   .body {
-    padding-top: 16px;
+    margin-top: 12px;
   }
 
   @media screen and (max-width: 1200px) {
     .title {
-      font-size: 2em;
-    }
-  }
-  @media screen and (max-width: 600px) {
-    .body {
-      padding-top: 8px;
+      font-size: 32px;
     }
   }
 </style>

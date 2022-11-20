@@ -6,20 +6,26 @@ const props = defineProps({
   },
 })
 
-const notificationDuration = 1000
-const isPopupShown = ref(false)
+const tooltipDuration = 1000
+const isTooltipShown = ref(false)
+let timeoutId: null | number = null
 
-function whenCopyClick() {
+function handleClick() {
   navigator.clipboard.writeText(props.text)
-  showPopup()
+  showTooltip()
 }
 
-function showPopup() {
-  isPopupShown.value = true
+function showTooltip() {
+  isTooltipShown.value = true
 
-  setTimeout(() => {
-    isPopupShown.value = false
-  }, notificationDuration)
+  if (timeoutId) {
+    clearTimeout(timeoutId)
+  }
+
+  timeoutId = setTimeout(() => {
+    isTooltipShown.value = false
+    timeoutId = null
+  }, tooltipDuration)
 }
 </script>
 
@@ -27,13 +33,13 @@ function showPopup() {
   <span :class=$style.copiedText>
     <span
       :class="$style.text"
-      @click='whenCopyClick'
+      @click='handleClick'
     >
       {{ text }}
     </span>
     <div
-      v-show='isPopupShown'
-      :class=$style.popup
+      v-show='isTooltipShown'
+      :class=$style.tooltip
     >
       Скопировано
     </div>
@@ -51,16 +57,16 @@ function showPopup() {
     cursor: pointer;
   }
   .text {
-    border-bottom: 2px dashed var(--textSecondary);
+    border-bottom: 1px dashed var(--textSecondary);
   }
   .text:hover {
     cursor: pointer;
     color: var(--textSecondary);
   }
-  .popup {
+  .tooltip {
     position: absolute;
-    padding: 0.4em 0.8em;
-    bottom: 1.4em;
+    padding: 4px 8px;
+    top: -2em;
     left: 50%;
     transform: translateX(-50%);
     border-radius: 0.4em;

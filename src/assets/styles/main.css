@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono&display=swap');
 
 *, :after, :before {
   box-sizing: border-box;
@@ -20,22 +21,28 @@
   /* Breakpoints */
   --phoneUpperBoundary: 600px;
   --tabletUpperBoundary: 1200px;
-  --monospaceFont: 'Roboto Mono', monospace;
+  --monospaceFont: 'JetBrains Mono', monospace;
   --textShadow: 0 0 4px;
   font-family: 'Roboto Condensed', sans-serif;
   color: var(--textPrimary);
-  line-height: 1.6em;
 }
-
 body {
   min-width: 360px;
   background: var(--bgSecondary);
 }
-
-p, h1, h2, h3, h4, h5, h6 {
+h1, h2, h3, h4, h5, h6 {
   margin: 0;
 }
-
+p {
+  margin: 8px 0;
+}
+ul {
+  margin: 0;
+  padding-left: 1.2em;
+}
+ul > li {
+  margin: 8px 0;
+}
 button {
   background: none;
   border: none;
@@ -43,12 +50,6 @@ button {
   color: inherit;
   padding: 0;
 }
-
-ul {
-  margin: 0;
-  padding-left: 1.2em;
-}
-
 @media screen and (max-width: 1200px) {
 }
 

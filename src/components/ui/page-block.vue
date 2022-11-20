@@ -73,6 +73,6 @@ function toggleShown() {
   transform: rotate(180deg);
 }
 .blockContent {
-  margin-top: 16px;
+  margin-top: 20px;
 }
 </style>

@@ -35,7 +35,7 @@
   box-sizing: border-box;
   margin: 0 auto;
   max-width: var(--tabletUpperBoundary);
-  padding: 100px 40px;
+  padding: 80px 40px;
 }
 @media screen and (min-width: 1200px) {
   .header {
