@@ -60,6 +60,7 @@ function toggleShown() {
   text-align: left;
   align-items: center;
   justify-content: space-between;
+  width: 100%;
   gap: 0.5em;
   font-size: 2rem;
   font-weight: bold;
