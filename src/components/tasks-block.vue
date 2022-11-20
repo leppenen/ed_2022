@@ -38,12 +38,17 @@ import solve15 from '@/assets/files/tasks/e15a.pdf'
 import solve16 from '@/assets/files/tasks/e16a.pdf'
 import solve_test1 from '@/assets/files/tasks/test1_sol.pdf'
 import TaskCard from './task-card.vue';
+import { computed, ref } from 'vue';
 
 export interface Task {
   taskName: string
   taskFilePath: string
   deadline: Date
   solutionFilePath: string
+}
+export interface Filter {
+  name: string
+  callback: (task: Task) => boolean
 }
 
 const createDate = (year: number, month: number, day: number, hour?: number, minute?: number) => {
@@ -183,6 +188,26 @@ const tasks: Task[] = [
     solutionFilePath: '',
   },
 ]
+
+const filters: Filter[] = [
+  {
+    name: 'Все задания',
+    callback: () => true
+  },
+  {
+    name: 'Надо выполнить',
+    callback: (task) => task.deadline > new Date()
+  },
+  {
+    name: 'Завершенные',
+    callback: (task) => task.deadline < new Date()
+  },
+]
+
+const activeFilterIndex = ref(0)
+const activeFilter = computed(() => filters[activeFilterIndex.value])
+
+const filteredTasks = computed(() => tasks.filter(activeFilter.value.callback))
 </script>
 
 <template>
@@ -191,9 +216,19 @@ const tasks: Task[] = [
     is-initially-shown
     title='Задания'
   >
+    <div :class='$style.filters'>
+      <button
+        v-for='(filter, index) in filters'
+        :key="index"
+        :class='[$style.filter, activeFilterIndex === index ? $style.activeFilter : undefined]'
+        @click='activeFilterIndex = index'
+      >
+        {{filter.name}}
+      </button>
+    </div>
     <div :class='$style.tasks'>
       <TaskCard
-        v-for="(task, index) in tasks"
+        v-for="(task, index) in filteredTasks"
         :key='index'
         :deadline="task.deadline"
         :solution-file-path='task.solutionFilePath'
@@ -207,7 +242,28 @@ const tasks: Task[] = [
 <style module>
 .tasks {
   display: grid;
+  margin-top: 20px;
   gap: 16px;
-  grid-template-columns: repeat(auto-fit, minmax(268px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(268px, 1fr));
+}
+.filters {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+.filter {
+  min-width: 40px;
+  padding: 8px 12px;
+  text-align: left;
+  border: 2px solid var(--textPrimary);
+  border-radius: 12px;
+  cursor: pointer;
+}
+.filter:hover {
+  border-color: var(--textSecondary);
+}
+.activeFilter {
+  color: var(--textSecondary);
+  border-color: var(--textSecondary);
 }
 </style>
