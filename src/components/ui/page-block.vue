@@ -59,6 +59,7 @@ function toggleShown() {
   display: flex;
   text-align: left;
   align-items: center;
+  justify-content: space-between;
   gap: 0.5em;
   font-size: 2rem;
   font-weight: bold;
