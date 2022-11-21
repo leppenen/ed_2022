@@ -195,7 +195,7 @@ const filters: Filter[] = [
     callback: () => true
   },
   {
-    name: 'Надо выполнить',
+    name: 'Текущие',
     callback: (task) => task.deadline > new Date()
   },
   {
@@ -204,7 +204,7 @@ const filters: Filter[] = [
   },
 ]
 
-const activeFilterIndex = ref(0)
+const activeFilterIndex = ref(1)
 const activeFilter = computed(() => filters[activeFilterIndex.value])
 
 const filteredTasks = computed(() => tasks.filter(activeFilter.value.callback))
