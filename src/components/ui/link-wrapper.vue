@@ -18,7 +18,7 @@
 
 <style module>
 .link {
-  text-decoration: none;
+  text-decoration: underline;
   color: inherit;
   width: fit-content;
   position: relative;
