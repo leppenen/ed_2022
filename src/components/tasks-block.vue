@@ -42,6 +42,7 @@ import solve16 from '@/assets/files/tasks/e16a.pdf'
 import solve17 from '@/assets/files/tasks/e17a.pdf'
 import solve18 from '@/assets/files/tasks/e18a.pdf'
 import solve19 from '@/assets/files/tasks/e19a.pdf'
+import solve21 from '@/assets/files/tasks/e21a.pdf'
 import solve_test1 from '@/assets/files/tasks/test1_sol.pdf'
 import TaskCard from './task-card.vue';
 import { computed, ref } from 'vue';
@@ -191,13 +192,13 @@ const tasks: Task[] = [
     taskName: 'Задание №20',
     deadline: createDeadlineDate(2022, 11, 21),
     taskFilePath: task20,
-    solutionFilePath: '',
+    solutionFilePath: 'https://drive.google.com/file/d/1vuaMYywmHo_8v2ii7W_K8-2BWhhJ5tpL/view?usp=sharing',
   },
   {
     taskName: 'Задание №21',
     deadline: createDeadlineDate(2022, 11, 29),
     taskFilePath: task21,
-    solutionFilePath: '',
+    solutionFilePath: solve21,
   },
   {
     taskName: 'Задание №22',
