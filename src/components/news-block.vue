@@ -1,15 +1,13 @@
 <script setup lang='ts'>
 import PageBlock from '@/components/ui/page-block.vue'
-import test2a from '../assets/files/tasks/test2a.pdf'
-import file from '../assets/images/file.svg'
-import LinkWrapper from './ui/link-wrapper.vue';
 </script>
 
 <template>
   <PageBlock
     title='Новости'
-  Последняя лекция курса — 19 декабря в 16:00.
-  Контрольная работа по третьей части курса состоится 20 декабря в 12:00
+  >
+    <p>Последняя лекция курса — 19 декабря в 16:00</p>
+    <p>Контрольная работа по третьей части курса состоится 20 декабря в <span :class='$style.highlighted'>12:00</span></p>
   </PageBlock>
 </template>
 
@@ -28,5 +26,8 @@ import LinkWrapper from './ui/link-wrapper.vue';
 }
 .task > ol {
   padding-left: 24px;
+}
+.highlighted {
+  color: var(--textSecondary);
 }
 </style>
