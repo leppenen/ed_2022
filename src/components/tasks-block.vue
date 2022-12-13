@@ -27,6 +27,7 @@ import task23 from '@/assets/files/tasks/e23.pdf'
 import task24 from '@/assets/files/tasks/e24.pdf'
 import task25 from '@/assets/files/tasks/e25.pdf'
 import task26 from '@/assets/files/tasks/e26.pdf'
+import task27 from '@/assets/files/tasks/e27.pdf'
 import solve1 from '@/assets/files/tasks/e1a.pdf'
 import solve2 from '@/assets/files/tasks/e2a.pdf'
 import solve3 from '@/assets/files/tasks/e3a.pdf'
@@ -231,6 +232,12 @@ const tasks: Task[] = [
     taskName: 'Задание №26',
     deadline: createDeadlineDate(2022, 12, 19),
     taskFilePath: task26,
+    solutionFilePath: '',
+  },
+  {
+    taskName: 'Задание №27',
+    deadline: createDeadlineDate(2022, 12, 20),
+    taskFilePath: task27,
     solutionFilePath: '',
   },
 ]
