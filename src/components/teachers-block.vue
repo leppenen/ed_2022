@@ -3,17 +3,7 @@ import PageBlock from '@/components/ui/page-block.vue';
 import TeacherCard from './ui/teacher-card.vue';
 import lectorAvatar from '@/assets/images/lector.jpg'
 import practiceAvatar from '@/assets/images/practice.jpg'
-import practiceGif from '@/assets/images/leppenen.webp'
-import { ref } from 'vue';
-
 const ioffeLink = 'http://www.ioffe.ru/coherent/index.html/Coherent/Main.html'
-
-const practiceAvatarSrc = ref(practiceAvatar)
-
-// NOTE: test
-setTimeout(() => {
-  practiceAvatarSrc.value = practiceGif
-}, 1000 * 60 * 20)
 </script>
 
 <template>
@@ -36,7 +26,7 @@ setTimeout(() => {
         full-name='Никита Витальевич Леппенен'
         exercise-type='Практика'
         email='leppenen.au@gmail.com'
-        :avatar-src='practiceAvatarSrc'
+        :avatar-src='practiceAvatar'
         :graduated="{
           link: ioffeLink,
           title: 'ФТИ им. А.Ф. Иоффе',
