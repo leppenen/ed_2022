@@ -230,12 +230,7 @@ const tasks: Task[] = [
     solutionFilePath: solve24,
   },
   {
-    taskName: 'Задание №25',{
-    taskName: 'Задание №27',
-    deadline: createDeadlineDate(2022, 12, 20),
-    taskFilePath: task27,
-    solutionFilePath: '',
-  },
+    taskName: 'Задание №25',
     deadline: createDeadlineDate(2022, 12, 14),
     taskFilePath: task25,
     solutionFilePath: solve25,
